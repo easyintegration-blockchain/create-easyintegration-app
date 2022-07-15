@@ -1,13 +1,13 @@
 {
-  "name": "cea",
+  "name": "creat-easyintegration-app",
   "version": "1.0.0",
   "description": "This is a template project to create react app",
   "bin": {
-    "cea": "bin/index.js"
+    "creat-easyintegration-app": "bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/easyintegration-blockchain/cea.git"
+    "url": "git+https://github.com/easyintegration-blockchain/creat-easyintegration-app.git"
   },
   "keywords": [
     "easyintegration"
@@ -15,9 +15,9 @@
   "author": "Rahul Kiran Gaddam",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/easyintegration-blockchain/cea/issues"
+    "url": "https://github.com/easyintegration-blockchain/creat-easyintegration-app/issues"
   },
-  "homepage": "https://github.com/easyintegration-blockchain/cea#readme",
+  "homepage": "https://github.com/easyintegration-blockchain/creat-easyintegration-app#readme",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
