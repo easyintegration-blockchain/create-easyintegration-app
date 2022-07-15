@@ -1,11 +1,13 @@
 tasks:
   - name: Running Project
-    init: npm install
+    init: npm install && gp sync-done npm-install
     command: npm run start
   - name: Running Storybook
-    init: npm run storybook
+    init: gp sync-await npm-install
+    command: npm run storybook
   - name: Running Jest test
-    init: npm run test
+    init: gp sync-await npm-install
+    command: npm run test
 ports:
   - name: Web App
     description: Main React App
