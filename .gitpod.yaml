@@ -1,0 +1,17 @@
+tasks:
+  - name: Running Project
+    init: npm install
+    command: npm run start
+  - name: Running Storybook
+    init: npm run storybook
+  - name: Running Jest test
+    init: npm run test
+ports:
+  - name: Web App
+    description: Main React App
+    port: 3000
+    onOpen: open-browser
+  - name: Storybook
+    description: Storybook Component Details
+    port: 6006
+    onOpen: open-browser
