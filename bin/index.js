@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 const fs = require('fs');
-const { exec } = require("child_process");
+const shell = require('shelljs');
 const args = process.argv.slice(1);
 
 // Welcome Message
@@ -20,28 +20,9 @@ args.reduce((location, foldername) => {
     }else{
         console.log("Creating Application @Folder => "+location_details);
         fs.mkdirSync(foldername, { recursive: true });
-        exec('cd '+location_details, (error, stdout, stderr) => {
-            if (error) {
-                console.log(`error: ${error.message}`);
-                return;
-            }
-            if (stderr) {
-                console.log(`stderr: ${stderr}`);
-                return;
-            }
-            console.log(`stdout: ${stdout}`);
-        });
-        exec('git clone https://github.com/easyintegration-blockchain/create-easyintegration-app .', (error, stdout, stderr) => {
-            if (error) {
-                console.log(`error: ${error.message}`);
-                return;
-            }
-            if (stderr) {
-                console.log(`stderr: ${stderr}`);
-                return;
-            }
-            console.log(`stdout: ${stdout}`);
-        });
+        shell.cd(foldername);
+        shell.exec('git clone https://github.com/easyintegration-blockchain/create-easyintegration-app .');
+        shell.exec('rm -rf bin');
     }
 })
 
