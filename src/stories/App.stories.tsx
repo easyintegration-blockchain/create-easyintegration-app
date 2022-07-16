@@ -6,7 +6,7 @@ export default {
     component: App
 } as ComponentMeta<typeof App>;
 
-const Template: ComponentStory<typeof App> = () => <App />;
+const Template: ComponentStory<typeof App> = (args) => <App />;
 
 export const WelcomeApp = Template.bind({});
-WelcomeApp;
+WelcomeApp.args = {};
