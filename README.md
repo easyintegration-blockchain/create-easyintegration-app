@@ -12,6 +12,8 @@ npx create-react-app . --template typescript
 npx sb init
 npm install @mui/material @emotion/react @emotion/styled --legacy-peer-deps
 npm install @mui/icons-material --legacy-peer-deps
+npm install styled-components
+npm install @types/styled-components --save-dev
 # Create bin/index.js
 
 # Testing
